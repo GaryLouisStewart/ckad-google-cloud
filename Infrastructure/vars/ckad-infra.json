@@ -1,6 +1,6 @@
 {
-    "credentials_file": "~/.gcloud/creds/CKAD-Training-453564ade4ce.json",
-    "project": "ckad-training-289317",
+    "credentials_file": "<CHANGEME>",
+    "project": "<CHANGEME>",
     "region": "europe-west2",
     "vpc_ip_range": "10.0.2.0/16",
     "autocreate_subnetworks": false,
