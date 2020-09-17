@@ -2,3 +2,6 @@
 *.terraform.tfstate
 modules.json
 lock.json
+.terraform
+*logs/
+*.terraform
