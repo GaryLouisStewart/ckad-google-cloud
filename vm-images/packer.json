@@ -1,0 +1,32 @@
+{
+    "variables": {
+		"project_id": "",
+		"zone": "",
+		"description": "",
+		"ssh_username": "",
+        "tags": "",
+        "account_file": "",
+        "source_image": "",
+        "image-name": ""
+    },
+
+    "builders": [
+      {
+        "type": "googlecompute",
+        "project_id": "{{user `project_id`}}",
+        "image_name": "{{user `image-name`}}",
+        "source_image_family": "{{user `source_image`}}",
+        "zone": "{{user `zone`}}",
+        "image_description": "{{user `description`}}",
+        "ssh_username": "{{user `ssh_username`}}",
+        "tags": "{{user `tags`}}",
+        "account_file": "{{user `account_file`}}"
+      }
+    ],
+    "provisioners": [
+        {
+           "type": "shell",
+           "script": "setup_tools.sh"
+        }
+     ]
+  }

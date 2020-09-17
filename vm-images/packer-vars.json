@@ -1,0 +1,10 @@
+{
+    "project_id": "",
+    "zone": "europe-west2-a",
+    "description": "Kubernetes node images",
+    "ssh_username": "root",
+    "tags": "ckad,kubernetes,demo",
+    "account_file": "",
+    "source_image": "ubuntu-1804-lts",
+    "image-name": "lf-ckad-kuberetes"
+}
