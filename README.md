@@ -4,7 +4,7 @@ CKAD materials with google cloud + terraform
 Firstly inspiration for this has come from gruntwork on the following repo, this uses the modules there to define a management network + firewall + bastion host
 https://github.com/gruntwork-io/terraform-google-network
 
-This repo also includes an image builder that will build GCP compute images using packer. The script is agnostic enough to allow you to build any GCP Compute  image that you wish, it will just require the modification of the variables files that are located in the vm-images folder. please refer to the documentation that is in those locations which is c
+This repo also includes an image builder that will build GCP compute images using packer. The script is agnostic enough to allow you to build any GCP Compute  image that you wish, it will just require the modification of the variables files that are located in the vm-images folder. please refer to the documentation that is in those locations which is called BUILD.md
 
 
 The two most important variables are the `credentials-file` and the `project`
