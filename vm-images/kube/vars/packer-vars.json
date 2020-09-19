@@ -6,5 +6,5 @@
     "tags": "ckad,kubernetes,demo",
     "account_file": "",
     "source_image": "ubuntu-1804-lts",
-    "image-name": "lf-ckad-kuberetes"
+    "image-name": "lf-ckad-kubernetes"
 }

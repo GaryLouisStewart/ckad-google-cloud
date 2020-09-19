@@ -58,3 +58,12 @@ variable "boot_image" {
 variable "allow_stopping_for_update" {
     description = "Whether to allow us to stop our instance for updates."
 }
+
+
+variable "disk_size" {
+    description = "The size of the boot disk."
+}
+
+variable "disk_type" {
+    description = "The type of disk to use"
+}

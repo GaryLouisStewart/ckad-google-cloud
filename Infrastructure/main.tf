@@ -41,6 +41,8 @@ resource "google_compute_instance" "private" {
   boot_disk {
     initialize_params {
       image = var.boot_image
+      size = var.disk_size
+      type = var.disk_type
     }
   }
 

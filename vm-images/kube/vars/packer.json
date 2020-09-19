@@ -4,10 +4,10 @@
 		"zone": "",
 		"description": "",
 		"ssh_username": "",
-        "tags": "",
-        "account_file": "",
-        "source_image": "",
-        "image-name": ""
+    "tags": "",
+    "account_file": "",
+    "source_image": "",
+    "image-name": ""
     },
 
     "builders": [
@@ -26,7 +26,7 @@
     "provisioners": [
         {
            "type": "shell",
-           "script": "setup_tools.sh"
+           "script": "scripts/setup_tools.sh"
         }
      ]
   }

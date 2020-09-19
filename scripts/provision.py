@@ -59,7 +59,7 @@ def apply():
     prefix = sys.argv[2]
     variable_location = vars_path + "/" + prefix + ".json"
     try:
-        process = Popen(['terraform', 'apply', '-var-file={0}'.format(variable_location)],
+        process = Popen(['terraform', 'apply', '-var-file={0}'.format(variable_location), '-auto-approve'],
                         cwd=path, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process.communicate()
         return print(stdout.decode(), stderr.decode())
@@ -72,7 +72,7 @@ def destroy():
     prefix = sys.argv[2]
     variable_location = vars_path + "/" + prefix + ".json"
     try:
-        process = Popen(['terraform', 'destroy', '-var-file={0}'.format(variable_location)],
+        process = Popen(['terraform', 'destroy', '-var-file={0}'.format(variable_location), '-auto-approve'],
                         cwd=path, stdout=PIPE, stderr=PIPE)
         stdout, stderr = process.communicate()
         return print(stdout.decode(), stderr.decode())
