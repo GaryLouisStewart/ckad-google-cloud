@@ -5,7 +5,7 @@
 SYMLINK="../scripts/provision.py"
 
 if [ -d "${HOME}/.gcloud/creds" ]; then
-    echo "Directory $HOME}/.gcloud/creds already exists exiting script..."
+    echo "Directory ${HOME}/.gcloud/creds already exists exiting script..."
 else
     echo "Creating ${HOME}/.gcloud/creds/ ...."
     mkdir -p "${HOME}"/.gcloud/creds

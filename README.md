@@ -6,6 +6,8 @@ https://github.com/gruntwork-io/terraform-google-network
 
 This repo also includes an image builder that will build GCP compute images using packer. The script is agnostic enough to allow you to build any GCP Compute  image that you wish, it will just require the modification of the variables files that are located in the vm-images folder. please refer to the documentation that is in those locations which is called BUILD.md
 
+Before you begin please make sure that the credentials file + profile you are using for google cloud has the correct permissions on your project. In order to deploy resources to google cloud with terraform you will need to at least have at a bare minimum `editor` permissions across your project. This will allow you to modify the state of all resources across your GCP project(s) where you wish to deploy this item. You will need to also enable additional gcloud apis as some of these might be switched off by default. For example if you wish to build the custom image that is included you will need to add a few additional apis in order to use packer remotley with our credentials files, instructions are located in build.md. Please do not use `owner` permissions as security wise it is a bad idea, ideally even using the `editor` permissions should be frowned upon but for the purpose of getting started quickly the compromise can be made. gcloud does have the option of other finely grained policies rather than the coarser `editor` roles, should you wish to spend the additional time configuring these restricted roles.
+
 
 The two most important variables are the `credentials-file` and the `project`
 make sure these are filled in I have excluded them from the vars/ckad-infra file on purpose as they include personal information.
