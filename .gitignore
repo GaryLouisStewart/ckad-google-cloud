@@ -1,7 +1,8 @@
 *.tfstate
-*.terraform.tfstate
+*terraform.tfstate
+*terraform.tfstate.backup
 modules.json
 lock.json
-*.terraform
+.terraform
 **/logs
 **.terraform
