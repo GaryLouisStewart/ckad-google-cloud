@@ -8,6 +8,8 @@ module "management_network" {
     name_prefix = var.name_prefix
     project = var.project
     region = var.region
+    allowed_public_restricted_subnetworks = var.allowed_public_restricted_subnetworks
+    allowed_public_ingress_ports          = var.allowed_public_ingress_ports
 }
 
 
@@ -19,7 +21,7 @@ module "bastion_host" {
     project = var.project
     zone = var.zone
     name_prefix = local.resource_name
-    tags = module.management_network.private
+    tags = module.management_network.public
     source_image = var.boot_image
 }
 

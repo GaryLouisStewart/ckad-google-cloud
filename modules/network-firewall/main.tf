@@ -60,7 +60,8 @@ resource "google_compute_firewall" "public_restricted_allow_inbound" {
   priority = "1000"
 
   allow {
-    protocol = "all"
+    protocol = "tcp"
+    ports    = var.allowed_public_ingress_ports
   }
 }
 

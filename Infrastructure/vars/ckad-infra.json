@@ -1,6 +1,6 @@
 {
-    "credentials_file": "<CHANGEME>",
-    "project": "<CHANGEME>",
+    "credentials_file": "",
+    "project": "",
     "region": "europe-west2",
     "vpc_ip_range": "10.0.2.0/16",
     "autocreate_subnetworks": false,
@@ -11,6 +11,9 @@
     "zone": "europe-west2-a",
     "instance_count": 3,
     "instance_type": "n1-standard-1",
-    "boot_image": "Ubuntu 18.04 LTS",
-    "allow_stopping_for_update" : true
+    "boot_image": "lf-ckad-kubernetes",
+    "allow_stopping_for_update" : true,
+    "disk_size": "50",
+    "disk_type": "pd-ssd",
+    "allowed_public_ingress_ports": ["22"]
 }
