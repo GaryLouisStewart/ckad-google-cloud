@@ -1,6 +1,8 @@
 # run packer builds on google cloud
 
-## enables us to run packer builds on google cloud platform
+* Please refer to initial documentation [here](../README.md) before you get started.
+
+## Enables us to run packer builds on google cloud platform
 
 documentation for additional settings can be found here:
 https://www.packer.io/docs/builders/googlecompute.html
@@ -11,4 +13,5 @@ https://www.packer.io/docs/builders/googlecompute.html
 - `../scripts/symlink.sh` make sure you chmod +x to this script and then execute it you can then run the command as described below.
 - `./build-image -<OPTS>` makesure you enter the directory where your gcp credentials file lives, you will also need to pass your gcp project_id in as well.
 - `./build-image -h` to display the built in help menu describing what flags are available
+- `./build-image -b` to begin the build process, enter your GCP credentials file e.g. `my-creds-xxxxxxxxxx.json` and your GCP project id e.g. `my-gcp-pro-x-x-x`
 - This script can be reused with patterns in the vm-images directory. You can take the kubernetes example in the `kube` folder and modify it to support a different image and/or use different scripts to complete different tasks on your instance.
