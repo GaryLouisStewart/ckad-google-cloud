@@ -25,8 +25,42 @@
     ],
     "provisioners": [
         {
+          "type": "shell",
+          "inline": [
+            "mkdir -p /${HOME}/scripts"
+          ]
+        },
+
+        {
+          "type": "file",
+          "source": "scripts/",
+          "destination": "/root/scripts"
+        },
+
+        {
+          "type": "shell",
+          "inline": "chmod +x /root/scripts/*"
+        },
+
+        {
            "type": "shell",
-           "script": "scripts/setup_tools.sh"
+           "scripts": [
+              "scripts/setup_tools.sh",
+              "scripts/bootstrap.sh"
+           ]
+        },
+
+        {
+          "type": "shell",
+          "environment_vars": [ "PRIV_FILE=/root/.ssh/kube", "PUB_FILE=/root/.ssh/kube.pub", "SCRIPT_LOCATION=/root/scripts/gen_ssh.py", "DIR=/root/.ssh"],
+          "inline":"/usr/bin/env python3 ${SCRIPT_LOCATION}"
+        },
+
+        {
+          "type": "shell",
+          "scripts":[
+            "scripts/copy_ssh_keys.sh"
+          ]
         }
      ]
   }
